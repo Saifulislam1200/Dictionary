@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">
+            📖 Dictionary App  
+        </h2>
+
+        <!-- Dark Mode Toggle Button -->
+        <span class="toggle-btn" onclick="toggleDarkMode()">
+            <i id="darkModeIcon" class="fas fa-moon"></i>
+        </span>
+
+        <div class="search-box">
+            <input type="text" id="wordInput" placeholder="Enter a word..." onkeypress="handleKeyPress(event)">
+            <button onclick="searchWord()">Search</button>
+        </div>
+
+        <div class="loader">
+            <i class="fas fa-spinner fa-spin fa-2x"></i>
+        </div>
+
+        <div id="result"></div>
+
+        <h5 class="mt-4">🔍 Search History</h5>
+        <ul id="historyList" class="list-group"></ul>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+</body>
+<footer class="footer">
+    <p>Developed by <a href="https://www.facebook.com/saifuldevs/" target="_blank">Saiful</a></p>
+</footer>
+
+</html>
